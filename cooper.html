@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="ageGrades.js"></script>
+    <script src="cooper.js"></script>
+  </head>
+  <body>
+    <h3>Тест Купера по дистанции покрытой за 12 минут</h3>
+    <p id=p1>Введите расстояние пройденное за 12 минут, в метрах:</p>
+    <input id=input1 type=text>
+    <input id=button1 type=button value="Посчитать" onClick="cooperDist();">
+    <p id=cooperd_out></p><br>
+
+    <hr>
+    <h3>Тест Купера по времени потраченному на пробегание 1,5 мили</h3>
+    <p id=p2>Введите время, за которое пробежали 1,5 мили (2414 метров, в формате MM:SS or MM:SS.MS):</p>
+    <input id=input2 type=text>
+    <input id=button2 type=button value="Посчитать" onClick="cooperTime();">
+    <p id=coopert_out></p><br>
+
+    <hr>
+    <h3>Тест Балке по дистанции пройденной за 15 минут</h3>
+    <p id=p3>Введите расстояние пройденное за 15 минут, в метрах:</p>
+    <input id=input3 type=text>
+    <input id=button3 type=button value="Посчитать" onClick="balkeDist();">
+    <p id=balke_out></p><br>
+
+    <hr>
+    <h3>Формула расчета VDOT Дэниелса</h3>
+    <p id=p4>Выберите дистанцию и введите результат на ней:</p>
+	<select id=select4 name=select4>
+	  <option value="800">800 м
+	  <option value="1000">1000 м
+	  <option value="1500">1500 м
+	  <option value="1609.34">1 миля
+	  <option value="2000">2000 м/2 км
+	  <option value="2414.02">1.5 мили
+	  <option value="3000">3000 м/3 км
+	  <option value="3218.69">2 мили
+	  <option value="4828.03">3 мили
+	  <option value="5000">5000 м/5 км
+	  <option value="8000">8000 м/8 км
+	  <option value="8046.72">5 миль
+	  <option value="10000">10000 м/10 км
+	  <option value="12000">12 км
+	  <option value="15000">15 км
+	  <option value="20000">20 км
+	  <option value="21097">полумарафон
+	  <option value="30000">30 км
+	  <option value="42195">марафон
+	</select>
+    <input id=input4 type=text>
+    <input id=button4 type=button value="Посчитать" onClick="prettyDaniels();">
+    <p id=daniels_out></p><br>
+
+    <hr>
+    <h3>Пересчет VDOT по Дэниелсу в результаты на дистанциях</h3>
+    <p id=p5>Введите VDOT:</p>
+    <input id=input5 type=text>
+    <input id=button5 type=button value="Посчитать" onClick="prettyTable();">
+    <div class=reverse_out></div><br>
+
+    <hr>
+    <h3>Возрастной коэффициент</h3>
+    <p id=age_p>Выберите дистанцию и введите ваше время (в формате HH:MM:SS):</p>
+	<select id=age_select name=age_select>
+	  <option value="1609.34">1 миля
+	  <option value="5000">5000 м/5 км
+	  <option value="10000">10000 м/10 км
+	  <option value="21097">полумарафон
+	  <option value="42195">марафон
+	</select>
+    <input id=age_time_input type=text>
+
+    <p id=age_gender_p>Выберите пол:</p>
+    <select id=age_gender_select>
+      <option value=F>F
+      <option value=M>M
+    </select>
+
+    <p id=age_age_p>Введите возраст:</p>
+    <input id=age_age_input type=text>
+    <input id=age_age_button type=button value="Посчитать" onClick="prettyAgeGrade();">
+    <p id=age_out></p>
+
+    <hr>
+    <h3>Предполагаемые результаты на основе возрастного коэффициента</h3>
+    <p id=revage_gender_p>Выберите пол:</p>
+    <select id=revage_gender_select>
+      <option value=F>F
+      <option value=M>M
+    </select>
+
+    <p id=revage_age_p>Введите возраст:</p>
+    <input id=revage_age_input type=text>
+
+    <p id=revage_coeff_p>Введите возрастной коэффициент:</p>
+    <input id=revage_coeff_input type=text>
+
+    <input id=revage_age_button type=button value="Посчитать" onClick="prettyReverseAgeGrade();">
+    <div class=revage_out></div>
+
+
+  </body>
+</html>
