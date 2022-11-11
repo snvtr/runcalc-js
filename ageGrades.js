@@ -998,7 +998,7 @@ function prettyAgeGrade() {
 
 function getDistTime(distance, gender, age) {
   //returns top graded time in decimal minutes for distance + gender + age
-  return strTimeToNum(AgeGrade[distance][gender])/AgeGrade[distance][String(age)+gender];
+  return strTimeToNum(AgeGrade[distance][gender])/AgeGrade[distance][age+gender];
 }
 
 function gradedResult(distance, gender, age) {
