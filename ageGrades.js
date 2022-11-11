@@ -1021,10 +1021,8 @@ function prettyReverseAgeGrade() {
   let pct      = document.getElementById('revage_coeff_input').value;
 
   for (let i of Object.keys(GRADED_D).sort((a,b)=>Number(a)-Number(b))) {
-    let prettyDistance = GRADED_D[i][0];
-    //alert(i + ':' + gender);
-    let topAgeResult = strTimeToNum(AgeGrade[String(i)][gender]);
-	let gradedAgeResult = prettyTime(100*topAgeResult/pct);
+    let topAgeResult = strTimeToNum(AgeGrade[String(i)][gender])/AgeGrade[String(i)][String(age)+gender];
+	  let gradedAgeResult = prettyTime(100*topAgeResult/pct);
     let row = document.createElement('tr');
     let cell1 = document.createElement('td');
     let cellText1 = document.createTextNode(GRADED_D[i][0]);
